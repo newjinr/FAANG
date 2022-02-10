@@ -10,6 +10,7 @@ int *findSum(int A[], int n, int k)
                 int *arr = new int[2]{i, j};
                 return arr;
             }
+    return NULL;
 }
 
 int main()
