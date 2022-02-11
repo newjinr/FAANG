@@ -45,7 +45,7 @@ int trap(vector<int> height)
         {
             if (leftMax < height[pl])
                 leftMax = height[pl];
-            else if (leftMax - height[pl])
+            else if (leftMax - height[pl] > 0)
                 units += leftMax - height[pl];
             pl++;
         }
@@ -53,7 +53,7 @@ int trap(vector<int> height)
         {
             if (rightMax < height[pr])
                 rightMax = height[pr];
-            else if (rightMax - height[pr])
+            else if (rightMax - height[pr] > 0)
                 units += rightMax - height[pr];
             pr--;
         }
