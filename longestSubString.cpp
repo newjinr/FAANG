@@ -12,14 +12,8 @@ int lengthOfLongestSubstring(string s)
     while (p2 < s.length())
     {
         if (characters.count(s[p2]) != 0 && p1 <= characters[s[p2]])
-        {
             p1 = ++characters[s[p2]];
-            characters[s[p2]] = p2;
-        }
-        else
-        {
-            characters[s[p2]] = p2;
-        }
+        characters[s[p2]] = p2;
         longest = max(longest, p2 - p1 + 1);
         p2++;
     }
